@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO ENTREGA DE CREDENCIALES - IT MANAGEMENT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Conexion con el style.css -->
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-img">
+            <img src="Captura de pantalla 2026-11-18 145957.png" alt="Logo de la empresa">
+        </div>
+
+        <div class="content">
+            <h2 class="title">Formulario de Entrega de Credenciales</h2>
+
+            <div class="legal-text">
+                <p>Este formulario tiene como finalidad dejar constancia de la <b>entrega de credenciales de acceso a
+                        los sistemas de información de la organización</b>, así como del <b>compromiso del colaborador
+                        con el uso adecuado, confidencial y responsable</b> de los accesos asignados, de conformidad con
+                    las <b>políticas, normas y lineamientos internos de la empresa</b>.</p>
+
+                <p>El colaborador declara conocer que las <b>credenciales de acceso son de uso personal e
+                        intransferible</b>, y que se encuentra <b>prohibido compartirlas con personas no
+                        autorizadas</b>. El <b>uso indebido de las credenciales</b> podrá dar lugar a las <b>acciones
+                        administrativas, disciplinarias o legales</b> a que haya lugar.</p>
+
+                <p>Así mismo, el colaborador <b>autoriza de manera previa, expresa e informada</b> el <b>tratamiento de
+                        sus datos personales</b> para fines <b>empresariales, administrativos, operativos, de seguridad,
+                        auditoría y cumplimiento normativo</b>, de conformidad con lo establecido en la <b>Ley 1581 de
+                        2012</b> y las políticas internas de tratamiento de datos personales de la organización.</p>
+            </div>
+
+            <div class="required-note">* Indica que la pregunta es obligatoria</div>
+
+        </div>
+
+        <form id="FormularioCredenciales">
+            <!-- Correo -->
+
+            <div class="question-card">
+                <label>Correo Electrónico<span class="required ">*</sp an></label>
+                <input type="email" name="correo" required placeholder="Ingrese su correo electrónico">
+            </div>
+
+            <!-- Razón Social -->
+
+            <div class="question-card">
+                <label>RAZON SOCIAL A LA QUE PERTENECE<span class="required">*</span></label>
+                <div class="help-text">Selecciona la empresa a la que pertenece el colaborador.</div>
+                <select name="razon_social" required>
+                    <option value="" disabled selected>Seleccione una opción</option>
+                    <option value="empresa1">FUNDACIÓN NEFROUROS</option>
+                    <option value="empresa2">NEFROUROS MOM SAS</option>
+                    <option value="empresa3">COMERCIALIZADORA FARMACEUTICA Y DE INSUMOS MEDICOS "CFIM" SAS</option>
+                    <option value="empresa1">CONSTRUCTORA MYS SAS</option>
+                    <option value="empresa2">INSUMOS Y PRODUCTOS MEDICOS SAS</option>
+                    <option value="empresa3">NEFROBOYACA SAS</option>
+                    <option value="empresa1">SES SALUD SAS</option>
+                    <option value="empresa2">ASESORIAS E INGENIERIA, SERVICIOS Y SUMINISTROS S.A.S.</option>
+                    <option value="empresa3">NEFROSERVICIOS SAS</option>
+                    <option value="empresa1">MEDICAL SUPPLIES & SERVICES ZOMAC SAS</option>
+                    <option value="empresa2">IT MANAGEMENT ZOMAC SAS</option>
+                    <option value="empresa3">CENTRAL DE INSUMOS Y MEDICAMENTOS CEINME SAS</option>
+                    <option value="empresa1">MEDIALCO ZONA FRANCA S.A.S</option>
+                    <option value="empresa2">LABORATORIO CLINICO RENAL CARE S.A.S</option>
+                    <option value="empresa3">CLINICA NEFROUROS S.A.S.</option>
+                    <option value="empresa1">SI CAPITAL SAS</option>
+                    <option value="empresa2">RENALHELP HD PSS S.R.L</option>
+                    <option value="empresa3">CORPOMEDICAL SRL</option>
+                    <option value="empresa3">SERVICIOS INTEGRALES DE INGENIERIA DE COLOMBIA S.A.S</option>
+                </select>
+            </div>
+
+            <!-- Tipo de documento -->
+            <div class="question-card">
+                <label>TIPO DE DOCUMENTO<span class="required">*</span></label>
+                <div class="help-text">Selecciona el tipo de documento de identidad del colaborador.</div>
+                <select name="tip_documento" required>
+                    <option value="" disabled selected>Seleccione una opción</option>
+                    <option value="cc">Cédula de Ciudadanía</option>
+                    <option value="ce">Cédula de Extranjería</option>
+                    <option value="ti">Tarjeta de Identidad</option>
+                    <option value="pasaporte">Pasaporte</option>
+                </select>
+            </div>
+
+            <!-- Número Documento -->
+            <div class="question-card">
+                <label>NÚMERO DE DOCUMENTO DE IDENTIDAD <span class="req">*</span></label>
+                <div class="help-text">Ingrese el número del documento de identidad sin puntos ni espacios.</div>
+                <input type="text" name="numero_documento" required placeholder="Tu respuesta">
+            </div>
+
+            <!-- Lugar Expedición -->
+            <div class="question-card">
+                <label>LUGAR DE EXPEDICIÓN <span class="req">*</span></label>
+                <div class="help-text">Indique el departamento y la ciudad donde fue expedido el documento. Ejemplo:
+                    NEIVA-HUILA</div>
+                <input type="text" name="lugar_expedicion" required placeholder="Tu respuesta">
+            </div>
+
+            <!-- Nombre -->
+            <div class="question-card">
+                <label>NOMBRE COMPLETO <span class="req">*</span></label>
+                <div class="help-text">Digite el nombre completo del colaborador, tal como aparece en el documento de
+                    identidad.</div>
+                <input type="text" name="nombre_completo" required placeholder="Tu respuesta">
+            </div>
+
+            <!-- Cargo -->
+            <div class="question-card">
+                <label>CARGO CORRESPONDIENTE <span class="req">*</span></label>
+                <div class="help-text">Indique el cargo que desempeña actualmente dentro de la organización.</div>
+                <input type="text" name="cargo" required placeholder="Tu respuesta">
+            </div>
+
+            <!-- Firma -->
+            <div class="question-card">
+                <label>FIRMA DEL COLABORADOR <span class="req">*</span></label>
+                <div class="help-text">Registre la firma del colaborador como constancia de recepción y aceptación de
+                    las credenciales. Se debe cargar en formato JPG o PNG</div>
+                <p class="file-notice">Sube 1 archivo compatible: image. El tamaño máximo es de 10 MB.</p>
+                <input type="file" name="firma" accept="image/jpeg, image/png" required>
+            </div>
+
+            <div class="submit-section">
+                <button type="submit" class="submit-btn" id="btnEnviar">Enviar</button>
+                <p id="mensaje"></p>
+            </div>
+
+        </form>
+
+    </div>
+
+    <!-- Conexion con el script.js -->
+    <script src="script.js"></script>
+</body>
+</html>
