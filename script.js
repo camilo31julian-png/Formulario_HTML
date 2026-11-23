@@ -18,7 +18,7 @@ document.getElementById('formularioCredenciales').addEventListener('submit', fun
     // Validar peso (10MB)
     if (file && file.size > 10 * 1024 * 1024) {
         mensaje.style.color = 'red';
-        mensaje.textContent = 'El archivo supera los 10MB.';
+        mensaje.textContent = 'El archivo supera los 10MB. Por favor, sube una imagen más pequeña.';
         btn.disabled = false;
         btn.textContent = 'Enviar';
         return;
@@ -62,18 +62,18 @@ function enviarDatos(payload, btn, mensaje, form) {
     .then(res => res.json())
     .then(data => {
         if (data.result === 'success') {
-            mensaje.style.color = 'green';
-            mensaje.textContent = '✅ Formulario enviado exitosamente. Credenciales en proceso.';
-            form.reset();
+            // Ocultar el formulario y mostrar la pantalla de agradecimiento
+            document.getElementById('contenedorFormulario').style.display = 'none';
+            document.getElementById('contenedorGracias').style.display = 'block';
+            // Hacer scroll al inicio de la página para que el usuario vea el mensaje
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         } else {
-            throw new Error(data.error || 'Error desconocido');
+            throw new Error(data.error || 'Error desconocido en el servidor');
         }
     })
     .catch(error => {
         mensaje.style.color = 'red';
         mensaje.textContent = '❌ Error al enviar: ' + error.message;
-    })
-    .finally(() => {
         btn.disabled = false;
         btn.textContent = 'Enviar';
     });
