@@ -15,7 +15,6 @@ document.getElementById('formularioCredenciales').addEventListener('submit', fun
     const fileInput = form.querySelector('input[type="file"]');
     const file = fileInput.files[0];
 
-    // Validar peso (10MB)
     if (file && file.size > 10 * 1024 * 1024) {
         mensaje.style.color = 'red';
         mensaje.textContent = 'El archivo supera los 10MB.';
@@ -24,14 +23,12 @@ document.getElementById('formularioCredenciales').addEventListener('submit', fun
         return;
     }
 
-    // Convertir imagen a Base64 para enviarla por JSON
     const reader = new FileReader();
     reader.onload = function(event) {
         const base64String = event.target.result;
         
         const payload = {
             correo: form.correo.value,
-            // Se eliminó la línea del checkbox para evitar errores
             razon_social: form.razon_social.value,
             tipo_documento: form.tipo_documento.value,
             numero_documento: form.numero_documento.value,
@@ -55,7 +52,6 @@ document.getElementById('formularioCredenciales').addEventListener('submit', fun
 function enviarDatos(payload, btn, mensaje, form) {
     fetch(URL_GOOGLE_SCRIPT, {
         method: 'POST',
-        // Usamos text/plain para evitar problemas de CORS con Google Apps Script
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify(payload)
     })
