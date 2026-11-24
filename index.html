@@ -1,194 +1,149 @@
-body {
-    background-color: #f0ebf8;
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 20px;
-    color: #202124;
-}
+<!DOCTYPE html>
+<html lang="es">
 
-.container {
-    max-width: 640px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    overflow: hidden;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO ENTREGA DE CREDENCIALES - IT MANAGEMENT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-/* Header IT Management */
-.header-img {
-    width: 100%;
-    height: 160px;
-    background: linear-gradient(135deg, #1a1a1a, #333333, #1a1a1a);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 4px solid #d32f2f;
-}
+    <!-- Conexion con el style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
 
-.header-img h1 {
-    color: #d32f2f;
-    font-size: 32px;
-    letter-spacing: 2px;
-    margin: 0;
-}
+<body>
+    <div class="container">
+        <div class="header-img">
+            <img src="Captura de pantalla 2026-11-18 145957.png" alt="Logo de la empresa" style="max-height: 100%; object-fit: contain;">
+        </div>
 
-.header-img h1 span {
-    color: #fff;
-    font-weight: 300;
-}
+        <div class="content">
+            <h2 class="title">Formulario de Entrega de Credenciales</h2>
 
-.content {
-    padding: 24px;
-}
+            <div class="legal-text">
+                <p>Este formulario tiene como finalidad dejar constancia de la <b>entrega de credenciales de acceso a
+                        los sistemas de información de la organización</b>, así como del <b>compromiso del colaborador
+                        con el uso adecuado, confidencial y responsable</b> de los accesos asignados, de conformidad con
+                    las <b>políticas, normas y lineamientos internos de la empresa</b>.</p>
 
-.title {
-    font-size: 32px;
-    font-weight: 400;
-    margin-bottom: 15px;
-    margin-top: 0;
-}
+                <p>El colaborador declara conocer que las <b>credenciales de acceso son de uso personal e
+                        intransferible</b>, y que se encuentra <b>prohibido compartirlas con personas no
+                        autorizadas</b>. El <b>uso indebido de las credenciales</b> podrá dar lugar a las <b>acciones
+                        administrativas, disciplinarias o legales</b> a que haya lugar.</p>
 
-.legal-text {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 15px;
-}
+                <p>Así mismo, el colaborador <b>autoriza de manera previa, expresa e informada</b> el <b>tratamiento de
+                        sus datos personales</b> para fines <b>empresariales, administrativos, operativos, de seguridad,
+                        auditoría y cumplimiento normativo</b>, de conformidad con lo establecido en la <b>Ley 1581 de
+                        2012</b> y las políticas internas de tratamiento de datos personales de la organización.</p>
+            </div>
 
-.legal-text b {
-    font-weight: 500;
-}
+            <div class="required-note">* Indica que la pregunta es obligatoria</div>
 
-.notice {
-    font-size: 12px;
-    color: #5f6368;
-    border-top: 1px solid #dadce0;
-    padding-top: 12px;
-    margin-top: 20px;
-}
+        </div>
 
-.required-note {
-    color: #d93025;
-    font-size: 14px;
-    margin-top: 15px;
-}
+        <!-- CORREGIDO: ID en minúscula para que coincida con el script.js -->
+        <form id="formularioCredenciales">
+            
+            <!-- Correo -->
+            <div class="question-card">
+                <label>Correo Electrónico<span class="req">*</span></label>
+                <input type="email" name="correo" required placeholder="Ingrese su correo electrónico">
+            </div>
 
-/* Form Elements */
-.question-card {
-    border: 1px solid #dadce0;
-    border-radius: 8px;
-    padding: 24px;
-    margin-bottom: 12px;
-    background: white;
-}
+            <!-- Razón Social -->
+            <div class="question-card">
+                <label>RAZÓN SOCIAL A LA QUE PERTENECE<span class="req">*</span></label>
+                <div class="help-text">Selecciona la empresa a la que pertenece el colaborador.</div>
+                <select name="razon_social" required>
+                    <option value="" disabled selected>Seleccione una opción</option>
+                    <option value="FUNDACIÓN NEFROUROS">FUNDACIÓN NEFROUROS</option>
+                    <option value="NEFROUROS MOM SAS">NEFROUROS MOM SAS</option>
+                    <option value="COMERCIALIZADORA FARMACEUTICA Y DE INSUMOS MEDICOS CFIM SAS">COMERCIALIZADORA FARMACEUTICA Y DE INSUMOS MEDICOS "CFIM" SAS</option>
+                    <option value="CONSTRUCTORA MYS SAS">CONSTRUCTORA MYS SAS</option>
+                    <option value="INSUMOS Y PRODUCTOS MEDICOS SAS">INSUMOS Y PRODUCTOS MEDICOS SAS</option>
+                    <option value="NEFROBOYACA SAS">NEFROBOYACA SAS</option>
+                    <option value="SES SALUD SAS">SES SALUD SAS</option>
+                    <option value="ASESORIAS E INGENIERIA, SERVICIOS Y SUMINISTROS S.A.S.">ASESORIAS E INGENIERIA, SERVICIOS Y SUMINISTROS S.A.S.</option>
+                    <option value="NEFROSERVICIOS SAS">NEFROSERVICIOS SAS</option>
+                    <option value="MEDICAL SUPPLIES & SERVICES ZOMAC SAS">MEDICAL SUPPLIES & SERVICES ZOMAC SAS</option>
+                    <option value="IT MANAGEMENT ZOMAC SAS">IT MANAGEMENT ZOMAC SAS</option>
+                    <option value="CENTRAL DE INSUMOS Y MEDICAMENTOS CEINME SAS">CENTRAL DE INSUMOS Y MEDICAMENTOS CEINME SAS</option>
+                    <option value="MEDIALCO ZONA FRANCA S.A.S">MEDIALCO ZONA FRANCA S.A.S</option>
+                    <option value="LABORATORIO CLINICO RENAL CARE S.A.S">LABORATORIO CLINICO RENAL CARE S.A.S</option>
+                    <option value="CLINICA NEFROUROS S.A.S.">CLINICA NEFROUROS S.A.S.</option>
+                    <option value="SI CAPITAL SAS">SI CAPITAL SAS</option>
+                    <option value="RENALHELP HD PSS S.R.L">RENALHELP HD PSS S.R.L</option>
+                    <option value="CORPOMEDICAL SRL">CORPOMEDICAL SRL</option>
+                    <option value="SERVICIOS INTEGRALES DE INGENIERIA DE COLOMBIA S.A.S">SERVICIOS INTEGRALES DE INGENIERIA DE COLOMBIA S.A.S</option>
+                </select>
+            </div>
 
-.question-card label {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 8px;
-    font-size: 15px;
-}
+            <!-- Tipo de documento -->
+            <div class="question-card">
+                <label>TIPO DE DOCUMENTO<span class="req">*</span></label>
+                <div class="help-text">Selecciona el tipo de documento de identidad del colaborador.</div>
+                <!-- CORREGIDO: name="tipo_documento" (antes decía tip_documento) -->
+                <select name="tipo_documento" required>
+                    <option value="" disabled selected>Seleccione una opción</option>
+                    <option value="CÉDULA DE CIUDADANÍA">Cédula de Ciudadanía</option>
+                    <option value="CÉDULA DE EXTRANJERÍA">Cédula de Extranjería</option>
+                    <option value="TARJETA DE IDENTIDAD">Tarjeta de Identidad</option>
+                    <option value="PASAPORTE">Pasaporte</option>
+                </select>
+            </div>
 
-.question-card .req {
-    color: #d93025;
-}
+            <!-- Número Documento -->
+            <div class="question-card">
+                <label>NÚMERO DE DOCUMENTO DE IDENTIDAD <span class="req">*</span></label>
+                <div class="help-text">Ingrese el número del documento de identidad sin puntos ni espacios.</div>
+                <input type="text" name="numero_documento" required placeholder="Tu respuesta">
+            </div>
 
-.question-card .help-text {
-    font-size: 13px;
-    color: #202124;
-    margin-bottom: 12px;
-    font-style: italic;
-}
+            <!-- Lugar Expedición -->
+            <div class="question-card">
+                <label>LUGAR DE EXPEDICIÓN <span class="req">*</span></label>
+                <div class="help-text">Indique el departamento y la ciudad donde fue expedido el documento. Ejemplo:
+                    NEIVA-HUILA</div>
+                <input type="text" name="lugar_expedicion" required placeholder="Tu respuesta">
+            </div>
 
-input[type="text"], input[type="email"], select {
-    width: 100%;
-    padding: 10px 0;
-    border: none;
-    border-bottom: 1px solid #dadce0;
-    font-size: 14px;
-    outline: none;
-    background: transparent;
-}
+            <!-- Nombre -->
+            <div class="question-card">
+                <label>NOMBRE COMPLETO <span class="req">*</span></label>
+                <div class="help-text">Digite el nombre completo del colaborador, tal como aparece en el documento de
+                    identidad.</div>
+                <input type="text" name="nombre_completo" required placeholder="Tu respuesta">
+            </div>
 
-input[type="text"]:focus, input[type="email"]:focus, select:focus {
-    border-bottom: 2px solid #673ab7;
-}
+            <!-- Cargo -->
+            <div class="question-card">
+                <label>CARGO CORRESPONDIENTE <span class="req">*</span></label>
+                <div class="help-text">Indique el cargo que desempeña actualmente dentro de la organización.</div>
+                <input type="text" name="cargo" required placeholder="Tu respuesta">
+            </div>
 
-input[type="checkbox"] {
-    margin-right: 8px;
-    transform: scale(1.2);
-}
+            <!-- Firma -->
+            <div class="question-card">
+                <label>FIRMA DEL COLABORADOR <span class="req">*</span></label>
+                <div class="help-text">Registre la firma del colaborador como constancia de recepción y aceptación de
+                    las credenciales. Se debe cargar en formato JPG o PNG</div>
+                <p class="file-notice">Sube 1 archivo compatible: image. El tamaño máximo es de 10 MB.</p>
+                <input type="file" name="firma" accept="image/jpeg, image/png" required>
+            </div>
 
-.checkbox-label {
-    display: flex !important;
-    align-items: center;
-    font-weight: 400 !important;
-    font-size: 13px !important;
-    margin-top: 15px;
-    cursor: pointer;
-}
+            <div class="submit-section">
+                <button type="submit" class="submit-btn" id="btnEnviar">Enviar</button>
+                <p id="mensaje"></p>
+            </div>
 
-.file-notice {
-    font-size: 13px; 
-    color: #5f6368; 
-    margin-bottom: 5px;
-}
+        </form>
 
-input[type="file"] {
-    margin-top: 10px;
-    font-size: 14px;
-}
+    </div>
 
-.submit-section {
-    padding: 0 24px 24px 24px;
-}
+    <!-- Conexion con el script.js -->
+    <script src="script.js"></script>
+</body>
 
-.submit-btn {
-    background-color: #673ab7;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background 0.3s;
-}
-
-.submit-btn:hover {
-    background-color: #5e35b1;
-}
-
-.submit-btn:disabled {
-    background-color: #b39ddb;
-    cursor: not-allowed;
-}
-
-#mensaje {
-    margin-top: 15px;
-    font-weight: 500;
-    font-size: 15px;
-}
-
-/* =========================================
-   ESTILOS PARA LA PÁGINA DE ÉXITO (exito.html)
-   ========================================= */
-
-.check-icon {
-    font-size: 70px;
-    color: #34a853;
-    background-color: #e6f4ea;
-    width: 110px;
-    height: 110px;
-    line-height: 110px;
-    border-radius: 50%;
-    margin: 0 auto 25px auto;
-    /* Animación de entrada */
-    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-@keyframes popIn {
-    0% { transform: scale(0); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
-}
+</html>
