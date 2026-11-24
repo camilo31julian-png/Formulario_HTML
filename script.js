@@ -18,7 +18,7 @@ document.getElementById('formularioCredenciales').addEventListener('submit', fun
     // Validar peso (10MB)
     if (file && file.size > 10 * 1024 * 1024) {
         mensaje.style.color = 'red';
-        mensaje.textContent = 'El archivo supera los 10MB. Por favor, sube una imagen más pequeña.';
+        mensaje.textContent = 'El archivo supera los 10MB.';
         btn.disabled = false;
         btn.textContent = 'Enviar';
         return;
@@ -31,7 +31,7 @@ document.getElementById('formularioCredenciales').addEventListener('submit', fun
         
         const payload = {
             correo: form.correo.value,
-            incluir_soporte: form.incluir_soporte.checked ? 'Sí' : 'No',
+            // Se eliminó la línea del checkbox para evitar errores
             razon_social: form.razon_social.value,
             tipo_documento: form.tipo_documento.value,
             numero_documento: form.numero_documento.value,
@@ -65,7 +65,7 @@ function enviarDatos(payload, btn, mensaje, form) {
             // 🚀 REDIRECCIÓN A LA PÁGINA DE ÉXITO
             window.location.href = 'exito.html';
         } else {
-            throw new Error(data.error || 'Error desconocido en el servidor');
+            throw new Error(data.error || 'Error desconocido');
         }
     })
     .catch(error => {
