@@ -62,11 +62,8 @@ function enviarDatos(payload, btn, mensaje, form) {
     .then(res => res.json())
     .then(data => {
         if (data.result === 'success') {
-            // Ocultar el formulario y mostrar la pantalla de agradecimiento
-            document.getElementById('contenedorFormulario').style.display = 'none';
-            document.getElementById('contenedorGracias').style.display = 'block';
-            // Hacer scroll al inicio de la página para que el usuario vea el mensaje
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            // 🚀 REDIRECCIÓN A LA PÁGINA DE ÉXITO
+            window.location.href = 'exito.html';
         } else {
             throw new Error(data.error || 'Error desconocido en el servidor');
         }
