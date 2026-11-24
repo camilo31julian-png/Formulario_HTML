@@ -1,242 +1,198 @@
-/* =========================================
-   ESTILOS GENERALES Y FONDO
-   ========================================= */
 body {
-    background-color: #f4f6f9; /* Gris muy claro corporativo, más limpio que el lila */
-    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f0ebf8;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 30px 15px;
-    color: #333333;
-    line-height: 1.5;
+    padding: 20px;
+    color: #202124;
 }
 
 .container {
-    max-width: 680px;
+    max-width: 640px;
     margin: 0 auto;
     background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     overflow: hidden;
 }
 
-/* =========================================
-   CABECERA (Logo IT MANAGEMENT)
-   ========================================= */
+/* Header IT Management */
 .header-img {
     width: 100%;
     height: 160px;
-    background: linear-gradient(135deg, #1a1a1a, #2c2c2c, #1a1a1a);
+    background: linear-gradient(135deg, #1a1a1a, #333333, #1a1a1a);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 5px solid #d32f2f;
-    
-  
-    overflow: hidden; /* Evita que cualquier imagen o texto se salga del cuadro */
-    border-radius: 8px 8px 0 0; /* Hace que las esquinas superiores respeten el borde de la tarjeta */
+    border-bottom: 4px solid #d32f2f;
 }
 
 .header-img h1 {
     color: #d32f2f;
-    font-size: 36px;
-    letter-spacing: 3px;
+    font-size: 32px;
+    letter-spacing: 2px;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    text-align: center;
 }
 
 .header-img h1 span {
-    color: #ffffff;
+    color: #fff;
     font-weight: 300;
 }
-/* =========================================
-   TEXTOS LEGALES Y ENCABEZADOS
-   ========================================= */
+
 .content {
-    padding: 30px 30px 20px 30px;
+    padding: 24px;
 }
 
 .title {
-    font-size: 28px;
-    font-weight: 500;
-    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 15px;
     margin-top: 0;
-    color: #111;
 }
 
 .legal-text {
     font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: #444;
-    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 15px;
 }
 
 .legal-text b {
-    font-weight: 600;
-    color: #000;
+    font-weight: 500;
 }
 
 .notice {
     font-size: 12px;
-    color: #666;
-    border-top: 1px solid #e0e0e0;
-    padding-top: 15px;
-    margin-top: 25px;
-    font-style: italic;
+    color: #5f6368;
+    border-top: 1px solid #dadce0;
+    padding-top: 12px;
+    margin-top: 20px;
 }
 
 .required-note {
     color: #d93025;
     font-size: 14px;
     margin-top: 15px;
-    font-weight: 500;
 }
 
-/* =========================================
-   TARJETAS DE PREGUNTAS (LOS CUADROS)
-   ========================================= */
+/* Form Elements */
 .question-card {
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 25px;
-    margin-bottom: 20px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 12px;
     background: white;
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.question-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    border-color: #d1d5db;
 }
 
 .question-card label {
     display: block;
-    font-weight: 600;
-    margin-bottom: 10px;
+    font-weight: 500;
+    margin-bottom: 8px;
     font-size: 15px;
-    color: #202124;
 }
 
 .question-card .req {
     color: #d93025;
-    margin-left: 3px;
 }
 
 .question-card .help-text {
     font-size: 13px;
-    color: #5f6368;
-    margin-bottom: 15px;
+    color: #202124;
+    margin-bottom: 12px;
     font-style: italic;
 }
 
-/* =========================================
-   ESTILOS DE LOS INPUTS (CAJAS DE TEXTO)
-   ========================================= */
 input[type="text"], 
 input[type="email"], 
 select {
     width: 100%;
-    padding: 12px 14px;
-    border: 1.5px solid #cbd5e1;
-    border-radius: 8px;
-    font-size: 15px;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #dadce0;
+    font-size: 14px;
     outline: none;
-    background-color: #f8fafc;
-    color: #333;
-    box-sizing: border-box;
-    transition: all 0.2s ease-in-out;
+    background: transparent;
 }
 
-/* Efecto al hacer clic en el campo */
 input[type="text"]:focus, 
 input[type="email"]:focus, 
 select:focus {
-    border-color: #673ab7; /* Color morado corporativo */
-    background-color: #ffffff;
-    box-shadow: 0 0 0 4px rgba(103, 58, 183, 0.15);
+    border-bottom: 2px solid #673ab7;
 }
 
-input::placeholder {
-    color: #9ca3af;
+input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
 }
 
-/* =========================================
-   ESTILO DEL BOTÓN DE SUBIR ARCHIVO (FIRMA)
-   ========================================= */
+.checkbox-label {
+    display: flex !important;
+    align-items: center;
+    font-weight: 400 !important;
+    font-size: 13px !important;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
 .file-notice {
     font-size: 13px; 
     color: #5f6368; 
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 input[type="file"] {
+    margin-top: 10px;
     font-size: 14px;
-    color: #555;
 }
 
-/* Personalizar el botón "Elegir archivo" por defecto del navegador */
-input[type="file"]::file-selector-button {
-    padding: 10px 18px;
-    border-radius: 6px;
-    background-color: #f1f5f9;
-    color: #333;
-    border: 1px solid #cbd5e1;
-    cursor: pointer;
-    font-weight: 500;
-    margin-right: 15px;
-    transition: all 0.2s ease;
-}
-
-input[type="file"]::file-selector-button:hover {
-    background-color: #e2e8f0;
-    border-color: #94a3b8;
-}
-
-/* =========================================
-   BOTÓN DE ENVIAR Y MENSAJES
-   ========================================= */
 .submit-section {
-    padding: 10px 30px 30px 30px;
-    text-align: left;
+    padding: 0 24px 24px 24px;
 }
 
 .submit-btn {
-    background-color: #d93025;
+    background-color: #673ab7;
     color: white;
     border: none;
-    padding: 14px 28px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(103, 58, 183, 0.2);
+    margin-top: 10px;
+    transition: background 0.3s;
 }
 
 .submit-btn:hover {
-    background-color: #d93025;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(103, 58, 183, 0.3);
-}
-
-.submit-btn:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(103, 58, 183, 0.2);
+    background-color: #5e35b1;
 }
 
 .submit-btn:disabled {
     background-color: #b39ddb;
     cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
 }
 
 #mensaje {
-    margin-top: 20px;
+    margin-top: 15px;
     font-weight: 500;
     font-size: 15px;
-    padding: 12px;
-    border-radius: 6px;
-    display: inline-block;
+}
+
+/* =========================================
+   ESTILOS PARA LA PÁGINA DE ÉXITO (exito.html)
+   ========================================= */
+
+.check-icon {
+    font-size: 70px;
+    color: #34a853;
+    background-color: #e6f4ea;
+    width: 110px;
+    height: 110px;
+    line-height: 110px;
+    border-radius: 50%;
+    margin: 0 auto 25px auto;
+    /* Animación de entrada */
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
 }
