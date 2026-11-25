@@ -1,5 +1,5 @@
 // ⚠️ IMPORTANTE: Reemplaza esta URL con la que te dé Google Apps Script al implementarlo.
-const URL_GOOGLE_SCRIPT = 'https://script.google.com/macros/s/AKfycbz_88YWkXBJm98dQKKzIHSdkV-2wx5uo7IPCv6WzgeLZAXyS3o04pF9Ju09gAPi5wwPhA/exec';
+const URL_GOOGLE_SCRIPT = 'https://script.google.com/macros/s/AKfycbyM8eCuLyO0eDamk58hDXeKzXrNuOZWj8bX8Z0NiyzfhZ5IfHXuiPbuigfBT7BsDwqeMQ/exec';
 
 document.getElementById('formularioCredenciales').addEventListener('submit', function(e) {
     e.preventDefault();
